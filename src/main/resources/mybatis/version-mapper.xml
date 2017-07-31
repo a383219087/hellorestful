@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.startnet.cqj.test.dao.IVersionDao">
+    <select id="getVersions" resultType="Version">
+        select ParameterSortID id,ParentID versionCode,SortName tableName from BL_TBL_ParameterSort
+    </select>
+
+    <select id="getVersion" resultType="Version" parameterType="Integer">
+        select ParameterSortID id,ParentID versionCode,SortName tableName from BL_TBL_ParameterSort where ParameterSortID=#{id}
+    </select>
+</mapper>

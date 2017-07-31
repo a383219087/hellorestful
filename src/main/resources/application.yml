@@ -1,0 +1,14 @@
+mybatis:
+  mapperLocations: classpath:mybatis/*-mapper.xml
+  config: classpath:mybatis/mybatis-conf.xml
+  typeAliasesPackage: com.startnet.cqj.test
+  checkConfigLocation: false
+
+spring:
+  datasource:
+    #url: jdbc:mysql://localhost:3306/books?serverTimezone=UTC&useSSL=false
+    url: jdbc:sqlserver://ZTT-PC\SQL2014EXPRESS:1433;DatabaseName=eVideoBill_ET
+    username: sa
+    password:
+    #driver-class-name: com.mysql.cj.jdbc.Driver
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
