@@ -11,7 +11,7 @@ import java.util.List;
  * Created by ztt on 2017-07-31.
  */
 @RestController
-@RequestMapping("/versions")
+@RequestMapping("/versions/")
 public class VersionController {
 
     @Resource
@@ -23,7 +23,7 @@ public class VersionController {
     }
 
 
-    @GetMapping(value = "/{id}")
+    @GetMapping(value = "{id}")
     public Version get(@PathVariable(name = "id") int id) {
         return mService.getVersion(id);
     }
@@ -34,13 +34,13 @@ public class VersionController {
         return "success:"+version.toString();
     }
 
-    @PutMapping(value = "/{id}")
+    @PutMapping(value = "{id}")
     public String update(@PathVariable int id,@ModelAttribute  Version version){
 
         return "update:id="+id+",version:"+version.toString();
     }
 
-    @DeleteMapping(value="/{id}")
+    @DeleteMapping(value="{id}")
     public String delete(@PathVariable int id){
         return "delete:id="+id;
     }
