@@ -17,6 +17,7 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.PlatformTransactionManager;
 
 /**
+ * 使用//x-www-form-urlencoded 格式请求，能够兼容put delete方法
  * Created by ztt on 2017-07-31.
  */
 @SpringBootApplication

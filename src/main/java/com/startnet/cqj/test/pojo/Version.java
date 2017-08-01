@@ -1,11 +1,9 @@
 package com.startnet.cqj.test.pojo;
 
-import javax.xml.bind.annotation.XmlRootElement;
-
 /**
  * Created by ztt on 2017-07-31.
  */
-@XmlRootElement(name="version")
+//@XmlRootElement(name="version")
 public class Version {
     private int id;
     private String tableName;
@@ -52,5 +50,10 @@ public class Version {
 
     public void setRecentId(int recentId) {
         this.recentId = recentId;
+    }
+
+    @Override
+    public String toString() {
+        return "tableName:"+tableName+";version:"+versionCode;
     }
 }
